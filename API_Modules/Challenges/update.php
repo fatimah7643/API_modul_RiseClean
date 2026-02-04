@@ -11,8 +11,8 @@ $xp_reward = isset($_POST['xp_reward']) ? (int)$_POST['xp_reward'] : null;
 $point_reward = isset($_POST['point_reward']) ? (int)$_POST['point_reward'] : null;
 $difficulty = $_POST['difficulty'] ?? null;
 $challenge_type = $_POST['challenge_type'] ?? null;
-$start_date = $_POST['start_date'] ?? null;
-$end_date = $_POST['end_date'] ?? null;
+$start_date = !empty($_POST['start_date']) ? $_POST['start_date'] : null;
+$end_date   = !empty($_POST['end_date'])   ? $_POST['end_date']   : null;
 $is_active = isset($_POST['is_active']) ? (int)$_POST['is_active'] : null;
 
 // Validasi: Jangan jalankan query jika data penting kosong

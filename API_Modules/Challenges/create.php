@@ -10,8 +10,8 @@ $xp_reward = $_POST['xp_reward'] ?? 20;
 $point_reward = $_POST['point_reward'] ?? 10;
 $difficulty = $_POST['difficulty'] ?? 'medium'; // easy, medium, hard
 $challenge_type = $_POST['challenge_type'] ?? 'daily'; // daily, special, weekly
-$start_date = $_POST['start_date'] ?? date('Y-m-d');
-$end_date = $_POST['end_date'] ?? null;
+$start_date = !empty($_POST['start_date']) ? $_POST['start_date'] : null;
+$end_date   = !empty($_POST['end_date'])   ? $_POST['end_date']   : null;
 $is_active = $_POST['is_active'] ?? 1;
 
 // Validasi input minimal agar tidak terjadi error "cannot be null"
