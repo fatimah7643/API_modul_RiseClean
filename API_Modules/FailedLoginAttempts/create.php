@@ -6,9 +6,9 @@ header('Content-Type: application/json');
 // Menangkap input dari form
 $username = $_POST['username'] ?? null;
 $ip_address = $_POST['ip_address'] ?? $_SERVER['REMOTE_ADDR'];
-$attempts = $_POST['attempts'] ?? 1;
-$last_attempt = $_POST['last_attempt'] ?? date('Y-m-d H:i:s');
-$blocked_until = $_POST['blocked_until'] ?? null;
+$attempts = !empty($_POST['attempts']) ? (int)$_POST['attempts'] : 1;
+$last_attempt = !empty($_POST['last_attempt']) ? $_POST['last_attempt'] : date('Y-m-d H:i:s');
+$blocked_until = !empty($_POST['blocked_until']) ? $_POST['blocked_until'] : null;
 
 // Validasi input minimal agar tidak terjadi error "cannot be null"
 if (empty($username)) {
@@ -26,7 +26,7 @@ $stmt = $conn->prepare("
 ");
 
 // Bind param: s=string, s=string, i=integer, s=string, s=string
-$stmt->bind_param("sssds", $username, $ip_address, $attempts, $last_attempt, $blocked_until);
+$stmt->bind_param("ssiss", $username, $ip_address, $attempts, $last_attempt, $blocked_until);
 
 if ($stmt->execute()) {
     echo json_encode([

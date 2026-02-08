@@ -6,11 +6,11 @@ header('Content-Type: application/json');
 // Menangkap input dari form
 $title = $_POST['title'] ?? null;
 $content = $_POST['content'] ?? null;
-$xp_reward = $_POST['xp_reward'] ?? 10;
-$point_reward = $_POST['point_reward'] ?? 5;
-$difficulty = $_POST['difficulty'] ?? 'medium'; // easy, medium, hard
+$xp_reward = $_POST['xp_reward'] ?? null;
+$point_reward = $_POST['point_reward'] ?? null;
+$difficulty = $_POST['difficulty'] ?? null; // easy, medium, hard
 $category = $_POST['category'] ?? null;
-$duration_minutes = $_POST['duration_minutes'] ?? 10;
+$duration_minutes = $_POST['duration_minutes'] ?? null;
 $is_active = $_POST['is_active'] ?? 1;
 
 // Validasi input minimal agar tidak terjadi error "cannot be null"

@@ -6,8 +6,8 @@ header('Content-Type: application/json');
 // Menangkap input dari form
 $question_id = $_POST['question_id'] ?? null;
 $choice_text = $_POST['choice_text'] ?? null;
-$is_correct = $_POST['is_correct'] ?? 0;
-$choice_order = $_POST['choice_order'] ?? 0;
+$is_correct = $_POST['is_correct'] ?? null;
+$choice_order = $_POST['choice_order'] ?? null;
 
 // Validasi input minimal agar tidak terjadi error "cannot be null"
 if (empty($choice_text)) {

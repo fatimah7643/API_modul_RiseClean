@@ -972,3 +972,515 @@ curl -X POST \
 - Gunakan prepared statements untuk mencegah SQL injection
 - Pastikan untuk selalu mengecek status respons sebelum memproses data lebih lanjut
 - Endpoint diakses melalui `/API_Modules/[NamaModul]/[operasi].php`
+
+
+
+# Dokumentasi Endpoint Join API Modul RiseClean
+
+## Daftar Isi
+1. [Users_Roles_Join](#users_roles_join)
+2. [Users_UserProgress_Join](#users_userprogress_join)
+3. [Users_Levels_Join](#users_levels_join)
+4. [Challenges_UserProgress_Join](#challenges_userprogress_join)
+5. [EducationModules_UserProgress_Join](#educationmodules_userprogress_join)
+6. [QuizQuestions_Choices_Join](#quizquestions_choices_join)
+7. [Users_UserQuizAnswers_Join](#users_userquizanswers_join)
+8. [Users_UserProgress_Levels_Join](#users_userprogress_levels_join)
+9. [QuizQuestions_Choices_Answers_Join](#quizquestions_choices_answers_join)
+10. [Users_Questions_Answers_Choices_Join](#users_questions_answers_choices_join)
+11. [Challenges_Levels_Join](#challenges_levels_join)
+
+## Users_Roles_Join
+Menggabungkan data pengguna dengan data peran (role) mereka.
+
+### Endpoint
+```
+GET /JOIN/Users_Roles_Join.php
+POST /JOIN/Users_Roles_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user dan role ditemukan",
+  "data": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "role_name": "Moderator",
+      "role_description": "Pengguna dengan hak akses moderasi"
+    }
+  ]
+}
+```
+
+## Users_UserProgress_Join
+Menggabungkan data pengguna dengan data kemajuan (progress) mereka.
+
+### Endpoint
+```
+GET /JOIN/Users_UserProgress_Join.php
+POST /JOIN/Users_UserProgress_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user dan progress ditemukan",
+  "data": [
+    {
+      "user_id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "progress_id": 1,
+      "item_id": 2,
+      "item_type": "module",
+      "completed_at": "2023-01-01 12:00:00",
+      "verified_at": null,
+      "is_verified": 0,
+      "submission_text": null,
+      "submission_image": null
+    }
+  ]
+}
+```
+
+## Users_Levels_Join
+Menggabungkan data pengguna dengan data level mereka.
+
+### Endpoint
+```
+GET /JOIN/Users_Levels_Join.php
+POST /JOIN/Users_Levels_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user dan level ditemukan",
+  "data": [
+    {
+      "user_id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "role_name": "Moderator",
+      "role_description": "Pengguna dengan hak akses moderasi",
+      "level_id": 3,
+      "level_name": "Green Apprentice",
+      "min_xp": 300
+    }
+  ]
+}
+```
+
+## Challenges_UserProgress_Join
+Menggabungkan data tantangan (challenges) dengan data kemajuan pengguna.
+
+### Endpoint
+```
+GET /JOIN/Challenges_UserProgress_Join.php
+POST /JOIN/Challenges_UserProgress_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID tantangan untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data challenge dan progress user ditemukan",
+  "data": [
+    {
+      "challenge_id": 1,
+      "title": "Tantangan Mingguan",
+      "description": "Selesaikan tugas mingguan untuk mendapatkan XP",
+      "xp_reward": 50,
+      "point_reward": 80,
+      "difficulty": "medium",
+      "challenge_type": "weekly",
+      "start_date": "2026-01-25",
+      "end_date": "2026-02-01",
+      "is_active": 1,
+      "challenge_created_at": "2026-01-25 07:39:41",
+      "challenge_updated_at": "2026-01-25 07:39:41",
+      "progress_id": 5,
+      "user_id": 1,
+      "item_id": 1,
+      "item_type": "challenge",
+      "completed_at": "2026-01-25 07:39:54",
+      "verified_at": null,
+      "is_verified": 0,
+      "submission_text": "",
+      "submission_image": null
+    }
+  ]
+}
+```
+
+## EducationModules_UserProgress_Join
+Menggabungkan data modul pendidikan dengan data kemajuan pengguna.
+
+### Endpoint
+```
+GET /JOIN/EducationModules_UserProgress_Join.php
+POST /JOIN/EducationModules_UserProgress_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID modul untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data education module dan progress user ditemukan",
+  "data": [
+    {
+      "module_id": 5,
+      "title": "Ayo Jaga Kebersihan",
+      "content": "Kebersihan Diri...",
+      "xp_reward": 5,
+      "point_reward": 5,
+      "difficulty": "easy",
+      "category": "General",
+      "duration_minutes": 10,
+      "is_active": 1,
+      "module_created_at": "2026-01-25 07:27:10",
+      "module_updated_at": "2026-01-25 07:27:10",
+      "progress_id": 1,
+      "user_id": 1,
+      "item_id": 2,
+      "item_type": "module",
+      "completed_at": "2026-01-16 02:52:51",
+      "verified_at": null,
+      "is_verified": 1,
+      "submission_text": null,
+      "submission_image": null
+    }
+  ]
+}
+```
+
+## QuizQuestions_Choices_Join
+Menggabungkan data pertanyaan kuis dengan pilihan jawaban.
+
+### Endpoint
+```
+GET /JOIN/QuizQuestions_Choices_Join.php
+POST /JOIN/QuizQuestions_Choices_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pertanyaan untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data pertanyaan kuis dan pilihan jawaban ditemukan",
+  "data": [
+    {
+      "question_id": 24,
+      "module_id": 5,
+      "question_text": "Mengapa menjaga kebersihan diri dan lingkungan penting bagi kesehatan manusia?",
+      "question_type": "multiple_choice",
+      "xp_reward": 5,
+      "point_reward": 0,
+      "difficulty": "easy",
+      "is_active": 1,
+      "choice_id": 93,
+      "choice_text": "Agar terlihat lebih rapi saja",
+      "is_correct": 0,
+      "choice_order": 1
+    }
+  ]
+}
+```
+
+## Users_UserQuizAnswers_Join
+Menggabungkan data pengguna dengan jawaban kuis mereka.
+
+### Endpoint
+```
+GET /JOIN/Users_UserQuizAnswers_Join.php
+POST /JOIN/Users_UserQuizAnswers_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user dan jawaban kuis ditemukan",
+  "data": [
+    {
+      "user_id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "answer_id": 15,
+      "module_id": 5,
+      "question_id": 25,
+      "selected_choice_id": 99,
+      "answer_text": null,
+      "is_correct": 0,
+      "points_earned": 0,
+      "xp_earned": 0,
+      "answered_at": "2026-01-25 07:33:17"
+    }
+  ]
+}
+```
+
+## Users_UserProgress_Levels_Join
+Menggabungkan data pengguna, kemajuan, dan level secara lengkap.
+
+### Endpoint
+```
+GET /JOIN/Users_UserProgress_Levels_Join.php
+POST /JOIN/Users_UserProgress_Levels_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user, progress, dan level ditemukan",
+  "data": [
+    {
+      "user_id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "progress_id": 1,
+      "item_id": 2,
+      "item_type": "module",
+      "completed_at": "2023-01-01 12:00:00",
+      "verified_at": null,
+      "is_verified": 0,
+      "submission_text": null,
+      "submission_image": null,
+      "level_id": 3,
+      "level_name": "Green Apprentice",
+      "min_xp": 300
+    }
+  ]
+}
+```
+
+## QuizQuestions_Choices_Answers_Join
+Menggabungkan data pertanyaan kuis, pilihan jawaban, dan jawaban pengguna.
+
+### Endpoint
+```
+GET /JOIN/QuizQuestions_Choices_Answers_Join.php
+POST /JOIN/QuizQuestions_Choices_Answers_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pertanyaan untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data pertanyaan kuis, pilihan jawaban, dan jawaban user ditemukan",
+  "data": [
+    {
+      "question_id": 25,
+      "module_id": 5,
+      "question_text": "Manakah yang termasuk contoh sampah organik?",
+      "question_type": "multiple_choice",
+      "xp_reward": 5,
+      "point_reward": 0,
+      "difficulty": "easy",
+      "is_active": 1,
+      "choice_id": 99,
+      "choice_text": "Sisa makanan dan daun kering",
+      "choice_is_correct": 0,
+      "choice_order": 3,
+      "answer_id": 15,
+      "user_id": 1,
+      "selected_choice_id": 99,
+      "answer_text": null,
+      "answer_is_correct": 0,
+      "points_earned": 0,
+      "xp_earned": 0,
+      "answered_at": "2026-01-25 07:33:17"
+    }
+  ]
+}
+```
+
+## Users_Questions_Answers_Choices_Join
+Menggabungkan data pengguna, pertanyaan kuis, jawaban mereka, dan pilihan jawaban.
+
+### Endpoint
+```
+GET /JOIN/Users_Questions_Answers_Choices_Join.php
+POST /JOIN/Users_Questions_Answers_Choices_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID pengguna untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data user, jawaban kuis, pertanyaan, dan pilihan jawaban ditemukan",
+  "data": [
+    {
+      "user_id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "081234567890",
+      "avatar": "default-avatar.png",
+      "role_id": 2,
+      "total_xp": 1500,
+      "total_points": 2000,
+      "current_level": 3,
+      "is_active": 1,
+      "last_login": "2023-01-01 15:30:00",
+      "created_at": "2023-01-01 10:00:00",
+      "updated_at": "2023-01-01 10:00:00",
+      "answer_id": 15,
+      "module_id": 5,
+      "question_id": 25,
+      "selected_choice_id": 99,
+      "answer_text": null,
+      "answer_is_correct": 0,
+      "points_earned": 0,
+      "xp_earned": 0,
+      "answered_at": "2026-01-25 07:33:17",
+      "question_text": "Manakah yang termasuk contoh sampah organik?",
+      "question_type": "multiple_choice",
+      "xp_reward": 5,
+      "point_reward": 0,
+      "difficulty": "easy",
+      "is_active": 1,
+      "choice_text": "Sisa makanan dan daun kering",
+      "choice_is_correct": 0,
+      "choice_order": 3
+    }
+  ]
+}
+```
+
+## Challenges_Levels_Join
+Menggabungkan data tantangan (challenges) dengan data level mereka.
+
+### Endpoint
+```
+GET /JOIN/Challenges_Levels_Join.php
+POST /JOIN/Challenges_Levels_Join.php
+```
+
+### Parameter
+- `id` (opsional): ID tantangan untuk mengambil data spesifik
+
+### Response
+```json
+{
+  "status": "success",
+  "message": "Data challenge dan level ditemukan",
+  "data": [
+    {
+      "challenge_id": 1,
+      "title": "Tantangan Mingguan",
+      "description": "Selesaikan tugas mingguan untuk mendapatkan XP",
+      "xp_reward": 50,
+      "point_reward": 80,
+      "difficulty": "medium",
+      "challenge_type": "weekly",
+      "start_date": "2026-01-25",
+      "end_date": "2026-02-01",
+      "is_active": 1,
+      "challenge_created_at": "2026-01-25 07:39:41",
+      "challenge_updated_at": "2026-01-25 07:39:41",
+      "level_id": 3,
+      "level_name": "Green Apprentice",
+      "min_xp": 300
+    }
+  ]
+}
+```

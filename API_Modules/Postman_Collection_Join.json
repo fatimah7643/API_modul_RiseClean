@@ -1,0 +1,426 @@
+{
+  "info": {
+    "_postman_id": "f0e4c2f7-4a9d-4e3a-b8e2-9c8d7a1b6c5e",
+    "name": "API Modul RiseClean - Join Endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Koleksi endpoint untuk menguji file join pada API Modul RiseClean"
+  },
+  "item": [
+    {
+      "name": "Users_Roles_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Roles_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Roles_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_Roles_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Roles_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Roles_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserProgress_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserProgress_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_Levels_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Levels_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Levels_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_Levels_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Levels_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Levels_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Challenges_UserProgress_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Challenges_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Challenges_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Challenges_UserProgress_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Challenges_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Challenges_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EducationModules_UserProgress_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/EducationModules_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "EducationModules_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EducationModules_UserProgress_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/EducationModules_UserProgress_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "EducationModules_UserProgress_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "QuizQuestions_Choices_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/QuizQuestions_Choices_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "QuizQuestions_Choices_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "QuizQuestions_Choices_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/QuizQuestions_Choices_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "QuizQuestions_Choices_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserQuizAnswers_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserQuizAnswers_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserQuizAnswers_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserQuizAnswers_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserQuizAnswers_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserQuizAnswers_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserProgress_Levels_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserProgress_Levels_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserProgress_Levels_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_UserProgress_Levels_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_UserProgress_Levels_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_UserProgress_Levels_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "QuizQuestions_Choices_Answers_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/QuizQuestions_Choices_Answers_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "QuizQuestions_Choices_Answers_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "QuizQuestions_Choices_Answers_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/QuizQuestions_Choices_Answers_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "QuizQuestions_Choices_Answers_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_Questions_Answers_Choices_Join",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Questions_Answers_Choices_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Questions_Answers_Choices_Join.php"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users_Questions_Answers_Choices_Join - By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/API_Modules/Users_Questions_Answers_Choices_Join.php",
+          "host": ["{{baseUrl}}"],
+          "path": ["API_Modules", "Users_Questions_Answers_Choices_Join.php"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost/API_modul_RiseClean"
+    }
+  ]
+}
